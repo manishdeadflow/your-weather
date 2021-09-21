@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">  </head>
+  <body>
+    {{> header}}
+    <div class="searchBox">
+      <input type="search" class="location" placeholder="Enter your location" name="location">
+      <p class="search">search</p>
+    </div>
+    <div class="result">
+      <p id="message-1"></p>
+      <p id="message-2"></p>
+    </div>
+    {{> footer}}
+    <script src="js/script.js"></script>
+  </body>
+</html>
