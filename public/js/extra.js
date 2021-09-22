@@ -67,7 +67,7 @@ const terminalOperation=function(){
     } 
     else {
       if (!weatherData) {
-        fetch(`http://localhost:3000/weather2?address=${input}`).then(
+        fetch(`/weather2?address=${input}`).then(
           (response) => {
             response.json().then((data) => {
               if (data.error) {

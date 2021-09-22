@@ -12,6 +12,7 @@ const viewsPath = path.join(__dirname, "../templates/views");
 const partialPath = path.join(__dirname, "../templates/partials");
 
 app.use(express.static(publicPath));
+const port=process.env.PORT || 3000
 
 app.set("view engine", "hbs");
 app.set("views", path.join(viewsPath));
@@ -75,6 +76,6 @@ app.get("*", (req, res) => {
   res.render("404");
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("started");
 });
