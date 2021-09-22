@@ -3,6 +3,7 @@ const terminalInput = document.querySelector(".terminalInput");
 const terminal = document.querySelector(".terminal");
 const help = document.querySelector(".help");
 const home = document.querySelector(".home");
+const inputButton=document.querySelector('.inputButton')
 
 let weatherData;
 
@@ -26,9 +27,8 @@ and you have to start everything from the start.<br>
 
 terminal.insertAdjacentHTML("beforeend", def);
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    const input = terminalInput.value;
+const terminalOperation=function(){
+  const input = terminalInput.value;
     terminalInput.value = "";
 
     if (document.querySelector(".default"))
@@ -64,7 +64,8 @@ document.addEventListener("keydown", (e) => {
           element.parentNode.removeChild(element);
         });
       weatherData = undefined;
-    } else {
+    } 
+    else {
       if (!weatherData) {
         fetch(`http://localhost:3000/weather2?address=${input}`).then(
           (response) => {
@@ -98,5 +99,13 @@ document.addEventListener("keydown", (e) => {
         }
       }
     }
+
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    terminalOperation()
   }
 });
+
+inputButton.addEventListener('click',terminalOperation)
