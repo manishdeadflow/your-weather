@@ -1,11 +1,11 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
 
-body{
-  height:100vh;
+body {
+  height: 100vh;
   font-family: monospace;
   font-size: 260%;
   display: flex;
@@ -13,16 +13,16 @@ body{
   justify-content: center;
   align-items: center;
 }
-h1{
+h1 {
   font-weight: 50;
 }
 
-p{
+p {
   margin-top: 1%;
   font-size: 150%;
 }
 
-.back{
+.back {
   padding-top: 3%;
   font-size: 60%;
   text-decoration: none;
